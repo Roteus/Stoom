@@ -1,4 +1,4 @@
 FROM java:8-jdk
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8080
+ADD target/stoom-petz-docker.jar stoom-petz-docker.jar
+ENTRYPOINT ["java", "-jar", "/stoom-petz-docker.jar"]
